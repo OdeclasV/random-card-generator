@@ -1,13 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-.container-fluid {
+body {
   background-color: green;
-  width: 20%;
+}
+.container-fluid {
   height: 100%;
 }
 
 .card {
   font-size: 100px;
+  width: 20%;
+  left: 40%;
 }
 
 .suit-header .card-suit {

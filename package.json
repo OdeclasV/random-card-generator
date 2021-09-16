@@ -32,7 +32,9 @@
   "homepage": "https://github.com/4GeeksAcademy/vanillajs-hello#readme",
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "fs": "^0.0.1-security",
     "jquery": "^3.5.1",
+    "module": "^1.2.5",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
