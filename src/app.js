@@ -75,7 +75,7 @@ let clearDeckButton = () => {
   gameContainer.insertBefore(clearButton, cardContainer).innerText =
     "Clear Deck";
   clearButton.classList.add("btn", "btn-warning", "m-3");
-
+  // put image back on the page
   clearButton.addEventListener("click", () => {
     cardContainer.innerHTML = `     <img
     class="m-1"
@@ -83,6 +83,7 @@ let clearDeckButton = () => {
     style="width: 13%;"
     alt=""
   />`;
+    // assign this empty array to clear cards objects that were inside
     cardDeck = [];
   });
 };

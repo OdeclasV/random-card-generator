@@ -17,6 +17,10 @@ img {
 #bottom-suit {
   transform: rotate(180deg);
 }
+
+#card-number {
+  text-align: center;
+}
 /* .container-fluid {
   height: 100%;
 }
