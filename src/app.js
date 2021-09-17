@@ -48,7 +48,8 @@ let createCard = () => {
 let shuffleCardsWhenClicked = () => {
   // create button to get a new card
   let shuffleButton = document.createElement("button");
-  gameContainer.appendChild(shuffleButton).innerText = "Get A Card";
+  gameContainer.insertBefore(shuffleButton, cardContainer).innerText =
+    "Get A Card";
   shuffleButton.classList.add("btn", "btn-secondary", "m-3");
 
   // dynamically create each new card after clicking button
@@ -58,7 +59,7 @@ let shuffleCardsWhenClicked = () => {
     deleteImage();
     cardDeck.forEach(({ cardnumber, cardsuit, color }) => {
       cardContainer.innerHTML += `
-      <div class="card" style= 'color:${color};'>
+      <div class="card m-1" style= 'color:${color};'>
         <div class="card-body">
         <div class="card-suit" id="top-suit">${cardsuit}</div>
         <div class="card-number" id="card-number">${cardnumber}</div>
@@ -71,11 +72,13 @@ let shuffleCardsWhenClicked = () => {
 
 let clearDeckButton = () => {
   let clearButton = document.createElement("button");
-  gameContainer.appendChild(clearButton).innerText = "Clear Deck";
+  gameContainer.insertBefore(clearButton, cardContainer).innerText =
+    "Clear Deck";
   clearButton.classList.add("btn", "btn-warning", "m-3");
 
   clearButton.addEventListener("click", () => {
     cardContainer.innerHTML = `     <img
+    class="m-1"
     src="https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-bicycle-rider-back-1_1024x1024.png?v=1535755695"
     style="width: 13%;"
     alt=""

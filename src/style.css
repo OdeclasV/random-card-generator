@@ -1,4 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
 
 body {
   background-color: green;
@@ -12,6 +12,10 @@ body {
 
 img {
   width: 13%;
+}
+
+#bottom-suit {
+  transform: rotate(180deg);
 }
 /* .container-fluid {
   height: 100%;
