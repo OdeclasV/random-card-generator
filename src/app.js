@@ -12,7 +12,6 @@ const suits = ["♦", "♥", "♠", "♣"];
 const gameContainer = document.querySelector("body");
 const cardContainer = document.querySelector(".card-container");
 let cardDeck = [];
-let image = document.querySelector("img");
 
 window.onload = function() {
   render();
@@ -26,7 +25,7 @@ let render = () => {
 
 let createCard = () => {
   // initialize empty object where each card info will be stored
-  // it will have cardnumber, cardsuit, and (card)color
+  // object has cardnumber, cardsuit, and color
   let cardObject = {};
 
   // get random number for card
@@ -54,18 +53,24 @@ let shuffleCardsWhenClicked = () => {
 
   // dynamically create each new card after clicking button
   shuffleButton.addEventListener("click", () => {
-    cardContainer.innerHTML = "";
+    cardContainer.innerHTML = `<img
+    class="m-1"
+    src="https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-bicycle-rider-back-1_1024x1024.png?v=1535755695"
+    style="width: 13%;"
+    alt=""
+  />`;
     createCard();
-    deleteImage();
     cardDeck.forEach(({ cardnumber, cardsuit, color }) => {
       cardContainer.innerHTML += `
-      <div class="card m-1" style= 'color:${color};'>
+      <div class="card m-1 shadow-lg" style= 'color:${color};'>
         <div class="card-body">
         <div class="card-suit" id="top-suit">${cardsuit}</div>
         <div class="card-number" id="card-number">${cardnumber}</div>
         <div class="card-suit" id="bottom-suit">${cardsuit}</div>
       </div>
     </div>`;
+
+      console.log(cardDeck);
     });
   });
 };
@@ -83,11 +88,7 @@ let clearDeckButton = () => {
     style="width: 13%;"
     alt=""
   />`;
-    // assign this empty array to clear cards objects that were inside
+    // assign CardDeck empty array to clear cards objects that were inside
     cardDeck = [];
   });
-};
-
-let deleteImage = () => {
-  image.src = "";
 };

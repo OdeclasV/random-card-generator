@@ -6,6 +6,7 @@ body {
 
 .card {
   font-size: 67.5px;
+  font-family: "Lora", serif;
   width: 13%;
   border-radius: 0.25em;
 }
